@@ -44,7 +44,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMap()
-        drawPolyline()
+//        drawPolyline()
     }
 
     func loadMap() {
@@ -140,21 +140,27 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        if listLocation.count == 4 {
-            listLocation.removeAll()
-            index = 0
-        } else {
-            listLocation.append(coordinate)
-            let marker = GMSMarker()
-            marker.position = listLocation[index]
-            marker.icon = GMSMarker.markerImage(with: .red)
-            marker.map = mapView
-            
-            
-            index += 1
-            
-            superLocation.append(listLocation)
-        }
+        listLocation.append(coordinate)
+        let marker = GMSMarker()
+        marker.position = coordinate
+        marker.icon = GMSMarker.markerImage(with: .red)
+        marker.map = mapView
+        
+//        if listLocation.count == 4 {
+//            listLocation.removeAll()
+//            index = 0
+//        } else {
+//            listLocation.append(coordinate)
+//            let marker = GMSMarker()
+//            marker.position = listLocation[index]
+//            marker.icon = GMSMarker.markerImage(with: .red)
+//            marker.map = mapView
+//
+//
+//            index += 1
+//
+//            superLocation.append(listLocation)
+//        }
         
     }
     
@@ -171,23 +177,73 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        for i in 0..<superLocation.count {
-            let rectangle = GMSPolyline()
+//        let lon1 = listLocation[0].longitude
+//        let lon2 = listLocation[1].longitude
+//        let lat1 = listLocation[0].latitude
+//        let lat2 = listLocation[1].latitude
+        let lon1 = listLocation[0].longitude * (.pi / 180)
+        let lon2 = listLocation[1].longitude * (.pi / 180)
+        let lat1 = listLocation[0].latitude * (.pi / 180)
+        let lat2 = listLocation[1].latitude * (.pi / 180)
+        let dLon = lon2 - lon1
+        let x = cos(lat2) * cos(dLon)
+        let y = cos(lat2) * sin(dLon)
+
+        let lat3 = atan2( sin(lat1) + sin(lat2), sqrt((cos(lat1) + x) * (cos(lat1) + x) + y * y) )
+        let lon3 = lon1 + atan2(y, cos(lat1) + x)
+
+        let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat3 * 180 / .pi, lon3 * 180 / .pi)
+        
+        
+        
+//        let lat3 = (lat1 + lat2) / 2
+//        let lon3 = (lon1 + lon2) / 2
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: center.latitude, longitude: center.longitude)
+        marker.icon = GMSMarker.markerImage(with: .green)
+        
+        if let mapView = self.mapView {
+            let latitude = marker.position.latitude
+
+            let longitude = marker.position.longitude
+
+            let location = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 25)
+            marker.map = mapView
+            mapView.camera = location
+
+            let polyline = GMSPolyline()
             let path = GMSMutablePath()
             
-            for item in superLocation[i] {
-                path.add(item)
+            
+            
+            for item in listLocation {
+                path.addLatitude(item.latitude, longitude: item.longitude)
             }
             
-            rectangle.path = path
-            rectangle.strokeColor = .green
-            rectangle.strokeWidth = 3
-            rectangle.isTappable = true
-            rectangle.title = "\(i)"
-            
-            rectangle.map = mapView
-            listPolyline.append(rectangle)
+            polyline.path = path
+                polyline.strokeColor = .red
+            polyline.strokeWidth = 1
+            polyline.map = mapView
         }
+        
+//        for i in 0..<superLocation.count {
+//            let rectangle = GMSPolyline()
+//            let path = GMSMutablePath()
+//
+//            for item in superLocation[i] {
+//                path.add(item)
+//            }
+//
+//            rectangle.path = path
+//            rectangle.strokeColor = .green
+//            rectangle.strokeWidth = 3
+//            rectangle.isTappable = true
+//            rectangle.title = "\(i)"
+//
+//            rectangle.map = mapView
+//            listPolyline.append(rectangle)
+//        }
         return true
     }
 
