@@ -11,6 +11,15 @@
 		53D356C024639DBE00AE8F17 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D356BF24639DBE00AE8F17 /* Extension.swift */; };
 		94AEF525CD26410893FDFEE6 /* Pods_GoogleMapDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC8ED21F088091DE37DE38A /* Pods_GoogleMapDemo.framework */; };
 		AD178591BA4206F6D56F2124 /* Pods_GoogleMapDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA5B9A8578ABEFD5076115D /* Pods_GoogleMapDemoUITests.framework */; };
+		CE4FA7C325FB438400F375BB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7C225FB438400F375BB /* BaseViewController.swift */; };
+		CE4FA7C725FB43DD00F375BB /* CustomInfoWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7C625FB43DD00F375BB /* CustomInfoWindowView.swift */; };
+		CE4FA7CA25FB43EF00F375BB /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7C925FB43EF00F375BB /* View.swift */; };
+		CE4FA7CC25FB441F00F375BB /* CustomInfoWindowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4FA7CB25FB441F00F375BB /* CustomInfoWindowView.xib */; };
+		CE4FA7CE25FB44C900F375BB /* MakerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7CD25FB44C900F375BB /* MakerVC.swift */; };
+		CE4FA7D125FB454C00F375BB /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7D025FB454C00F375BB /* Storyboard.swift */; };
+		CE4FA7D325FB459100F375BB /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7D225FB459100F375BB /* AlertService.swift */; };
+		CE4FA7D525FB45B400F375BB /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7D425FB45B400F375BB /* CustomAlertVC.swift */; };
+		CE4FA7D725FB45D100F375BB /* AlertConfirmActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FA7D625FB45D100F375BB /* AlertConfirmActionVC.swift */; };
 		CE68AA202288FD4A00C59510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68AA1F2288FD4A00C59510 /* AppDelegate.swift */; };
 		CE68AA222288FD4A00C59510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68AA212288FD4A00C59510 /* ViewController.swift */; };
 		CE68AA252288FD4A00C59510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE68AA232288FD4A00C59510 /* Main.storyboard */; };
@@ -48,6 +57,15 @@
 		5EC8ED21F088091DE37DE38A /* Pods_GoogleMapDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26F7707F41B1DF304517D39 /* Pods-GoogleMapDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapDemo/Pods-GoogleMapDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C86B81DE0BE559D4B29BB605 /* Pods-GoogleMapDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapDemoTests/Pods-GoogleMapDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE4FA7C225FB438400F375BB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE4FA7C625FB43DD00F375BB /* CustomInfoWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindowView.swift; sourceTree = "<group>"; };
+		CE4FA7C925FB43EF00F375BB /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		CE4FA7CB25FB441F00F375BB /* CustomInfoWindowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindowView.xib; sourceTree = "<group>"; };
+		CE4FA7CD25FB44C900F375BB /* MakerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerVC.swift; sourceTree = "<group>"; };
+		CE4FA7D025FB454C00F375BB /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		CE4FA7D225FB459100F375BB /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		CE4FA7D425FB45B400F375BB /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
+		CE4FA7D625FB45D100F375BB /* AlertConfirmActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfirmActionVC.swift; sourceTree = "<group>"; };
 		CE68AA1C2288FD4A00C59510 /* GoogleMapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE68AA1F2288FD4A00C59510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE68AA212288FD4A00C59510 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +134,67 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE4FA7BF25FB435300F375BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE68AA212288FD4A00C59510 /* ViewController.swift */,
+				CE4FA7CD25FB44C900F375BB /* MakerVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE4FA7C025FB435C00F375BB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7C125FB436300F375BB /* BaseAlert */,
+				CE4FA7C225FB438400F375BB /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE4FA7C125FB436300F375BB /* BaseAlert */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7D225FB459100F375BB /* AlertService.swift */,
+				CE4FA7D425FB45B400F375BB /* CustomAlertVC.swift */,
+				CE4FA7D625FB45D100F375BB /* AlertConfirmActionVC.swift */,
+			);
+			path = BaseAlert;
+			sourceTree = "<group>";
+		};
+		CE4FA7C425FB43B600F375BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7C525FB43C000F375BB /* CustomInfoWindow */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE4FA7C525FB43C000F375BB /* CustomInfoWindow */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7C625FB43DD00F375BB /* CustomInfoWindowView.swift */,
+				CE4FA7CB25FB441F00F375BB /* CustomInfoWindowView.xib */,
+			);
+			path = CustomInfoWindow;
+			sourceTree = "<group>";
+		};
+		CE4FA7C825FB43E300F375BB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7C925FB43EF00F375BB /* View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE4FA7CF25FB453A00F375BB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FA7D025FB454C00F375BB /* Storyboard.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		CE68AA132288FD4A00C59510 = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +221,11 @@
 			isa = PBXGroup;
 			children = (
 				CE68AA1F2288FD4A00C59510 /* AppDelegate.swift */,
-				CE68AA212288FD4A00C59510 /* ViewController.swift */,
+				CE4FA7CF25FB453A00F375BB /* Application */,
+				CE4FA7C825FB43E300F375BB /* Extension */,
+				CE4FA7C425FB43B600F375BB /* View */,
+				CE4FA7C025FB435C00F375BB /* Base */,
+				CE4FA7BF25FB435300F375BB /* Controller */,
 				53D356BF24639DBE00AE8F17 /* Extension.swift */,
 				CE68AA232288FD4A00C59510 /* Main.storyboard */,
 				CE68AA292288FD4D00C59510 /* Assets.xcassets */,
@@ -282,6 +365,7 @@
 				CE68AA2D2288FD4D00C59510 /* LaunchScreen.storyboard in Resources */,
 				CE68AA2A2288FD4D00C59510 /* Assets.xcassets in Resources */,
 				CE68AA252288FD4A00C59510 /* Main.storyboard in Resources */,
+				CE4FA7CC25FB441F00F375BB /* CustomInfoWindowView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +483,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4FA7C325FB438400F375BB /* BaseViewController.swift in Sources */,
+				CE4FA7CE25FB44C900F375BB /* MakerVC.swift in Sources */,
 				CE68AA222288FD4A00C59510 /* ViewController.swift in Sources */,
 				CE68AA202288FD4A00C59510 /* AppDelegate.swift in Sources */,
+				CE4FA7D325FB459100F375BB /* AlertService.swift in Sources */,
 				CE68AA282288FD4A00C59510 /* GoogleMapDemo.xcdatamodeld in Sources */,
+				CE4FA7D725FB45D100F375BB /* AlertConfirmActionVC.swift in Sources */,
 				53D356C024639DBE00AE8F17 /* Extension.swift in Sources */,
+				CE4FA7CA25FB43EF00F375BB /* View.swift in Sources */,
+				CE4FA7D525FB45B400F375BB /* CustomAlertVC.swift in Sources */,
+				CE4FA7D125FB454C00F375BB /* Storyboard.swift in Sources */,
+				CE4FA7C725FB43DD00F375BB /* CustomInfoWindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

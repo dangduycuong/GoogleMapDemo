@@ -45,6 +45,14 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         super.viewDidLoad()
         loadMap()
 //        drawPolyline()
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(nextCustomWindowView))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    @objc func nextCustomWindowView() {
+        title = ""
+        let vc = Storyboard.Main.makerVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func loadMap() {
